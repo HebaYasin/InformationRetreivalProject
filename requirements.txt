@@ -1,0 +1,7 @@
+Flask
+wikipedia-api
+pandas
+beautifulsoup4
+nltk
+scikit-learn
+pyspellchecker
