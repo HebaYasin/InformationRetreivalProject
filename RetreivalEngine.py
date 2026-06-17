@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify
 import wikipediaapi
 from itertools import cycle
 import pandas as pd
-from bs4 import BeautifulSoup
 import re
 import nltk
 from nltk.corpus import stopwords
@@ -53,11 +52,8 @@ df_articles = pd.DataFrame(data)
 print(f"Collected {len(df_articles)} articles.")
 print(df_articles.head())
 
-text = ' '.join(df_articles['Content']) #converts panda series to one whole string
-
 #########################################################################
 
-stop_words = set(stopwords.words('english'))
 stemmer=PorterStemmer()
 
 #DOCUMENT PREPROCESSING:
